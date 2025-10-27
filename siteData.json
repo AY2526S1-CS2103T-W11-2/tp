@@ -113,7 +113,10 @@
         "viewing-help-help": "Viewing help : help",
         "adding-a-person-add": "Adding a person: add",
         "listing-all-persons-list": "Listing all persons : list",
+        "view-member-s-view": "View member(s): view",
         "editing-a-person-edit": "Editing a person : edit",
+        "undoing-an-action-undo": "Undoing an action: undo",
+        "redoing-an-action-redo": "Redoing an action: redo",
         "locating-persons-by-name-or-tag-find": "Locating persons by name or tag: find",
         "archiving-members-archive": "Archiving members : archive",
         "listing-archived-people-listarchived": "Listing archived people: listarchived",
@@ -127,7 +130,8 @@
         "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
         "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "command-summary": "Command summary",
+        "glossary": "Glossary"
       },
       "headingKeywords": {}
     },
