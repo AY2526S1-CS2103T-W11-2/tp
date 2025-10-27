@@ -127,8 +127,6 @@
         "delete-payment-s-deletepayment": "Delete payment(s): deletepayment",
         "finding-payments-findpayment": "Finding Payments: findpayment",
         "general-commands": "⚙️ General Commands",
-        "listing-archived-people-listarchived": "Listing archived people: listarchived",
-        "unarchiving-members-unarchive": "Unarchiving members: unarchive",
         "undoing-an-action-undo": "Undoing an action: undo",
         "redoing-an-action-redo": "Redoing an action: redo",
         "exiting-the-program-exit": "Exiting the Program: exit",
