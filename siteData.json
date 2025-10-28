@@ -105,6 +105,7 @@
     },
     {
       "src": "UserGuide.md",
+      "title": "User Guide",
       "headings": {
         "treasura-user-guide": "Treasura User Guide",
         "quick-start": "🚀 Quick start",
