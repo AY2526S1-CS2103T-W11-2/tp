@@ -61,8 +61,9 @@
         "non-functional-requirements": "Non-Functional Requirements",
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
         "launch-and-shutdown": "Launch and shutdown",
-        "deleting-a-person": "Deleting a person",
+        "archiving-a-person": "Archiving a person",
         "saving-data": "Saving data"
       },
       "headingKeywords": {}
@@ -144,10 +145,8 @@
         "editing-the-data-file": "Editing the data file",
         "faq": "FAQ",
         "known-issues": "Known issues",
-        "limitations": "Limitations",
         "command-summary": "Command summary",
-        "glossary": "Glossary",
-        "appendix-planned-enhancements": "Appendix: Planned Enhancements"
+        "glossary": "Glossary"
       },
       "headingKeywords": {}
     },
