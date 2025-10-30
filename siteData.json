@@ -50,6 +50,11 @@
         "model-component": "Model component",
         "storage-component": "Storage component",
         "common-classes": "Common classes",
+        "implementation": "Implementation",
+        "addmember-feature": "AddMember feature",
+        "archive-feature": "Archive feature",
+        "addpayment-feature": "AddPayment feature",
+        "viewpayment-feature": "ViewPayment feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
@@ -73,10 +78,7 @@
         "challenges-faced": "Challenges Faced",
         "effort-and-achievements": "Effort and Achievements",
         "reuse-and-efficiency": "Reuse and Efficiency",
-        "summary": "Summary",
-        "launch-and-shutdown": "Launch and shutdown",
-        "archiving-a-person": "Archiving a person",
-        "saving-data": "Saving data"
+        "summary": "Summary"
       },
       "headingKeywords": {}
     },
