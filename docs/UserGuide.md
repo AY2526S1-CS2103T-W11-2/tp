@@ -84,7 +84,7 @@ First, he checks the current members:
 list
 ```
 
-He sees the following list:
+He sees the following list: <br>
 <img src="images/GraduatedSeniors.png" alt="graduated seniors" width="450" />
 
 John and Chloe have graduated, so Alex archives them with:
@@ -120,7 +120,7 @@ To double-check, he runs:
 list
 ```
 
-and confirms that all new members appear correctly.
+and confirms that all new members appear correctly. <br>
 <img src="images/NewMembersAdded.png" alt="new members added" width="450" />
 
 <box type="info" seamless>
@@ -141,7 +141,7 @@ addpayment 1,2 a/21.00 d/2025-09-10 r/CCA Shirt Fee
 ```
 
 (Here, `1` refers to Ethan, and `2` to Sarah, based on the current list.)
-<img src="images/EthanSarahPaymentSuccess.png" alt="ethan sarah payment success" width="450" />
+<img src="images/EthanSarahPaymentSuccess.png" alt="ethan sarah payment success" width="450" /> <br>
 
 A few days later, Lucas pays as well, so Alex first finds Lucas in the list:
 ```
@@ -185,7 +185,7 @@ but the payment list is getting long. To locate the payment precisely, he runs:
 findpayment 1 r/membership
 ```
 
-This filters only Ethan’s payments that include the remark *“membership”*.  
+This filters only Ethan’s payments that include the remark *“membership”*.   
 <img src="images/FindEthansPayment.png" alt="find ethan's payment" width="450" />
 
 ---
