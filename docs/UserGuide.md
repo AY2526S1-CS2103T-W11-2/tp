@@ -35,7 +35,7 @@ Treasura is primarily targeted towards CCA leaders and treasurers. 🎓💼
 ---
 
 ### 💡 Example Commands to Try
-* `add n/John Doe p/98765432 e/johnd@example.com m/A0123456X t/friend t/owesMoney` — Adds a contact named `John Doe` to Treasura.
+* `add n/John Doe p/98765432 e/johnd@example.com m/A0123456X t/friend t/owesMoney` — Adds a member named `John Doe` to Treasura.
 * `archive 3` — Archives the 3rd member shown in the current list.
 
 Refer to the [Features](#features) below for details of more commands.
@@ -728,7 +728,7 @@ Furthermore, certain edits can cause the Treasura to behave in unexpected ways (
 1. **When using multiple screens**, if you move the application to a secondary screen, and later switch to using only the primary screen, the GUI will open off-screen. The remedy is to delete the `preferences.json` file created by the application before running the application again.
 2. **If you minimize the Help Window** and then run the `help` command (or use the `Help` menu, or the keyboard shortcut `F1`) again, the original Help Window will remain minimized, and no new Help Window will appear. The remedy is to manually restore the minimized Help Window.
 3. Undo history is cleared upon application restart.
-4. There is a constraint of 100 characters for a name, email, remark or tag. Breaching this limit may cause UI errors and unresponsiveness.
+4. There is a constraint of 100 characters for a name, email, remark or 30 characters for tag. Breaching this limit may cause UI errors and unresponsiveness.
 5. Only one Treasura instance can access a data file at a time - opening multiple windows at once might not save data properly.
 6. Member payments are currently displayed in the command result panel. We will be adding a separate dashboard to view payments seamlessly in the future.
 
@@ -752,7 +752,7 @@ Furthermore, certain edits can cause the Treasura to behave in unexpected ways (
 | **View Member**     | `view INDEX`                                                               | `view 4`                                                                           |
 | **Add Payment**     | `addpayment INDEX[,INDEX]... a/AMOUNT d/DATE [r/REMARKS]`                  | `addpayment 1,3 a/25.00 d/2025-10-24 r/Monthly dues`                               |
 | **Edit Payment**    | `editpayment PERSON_INDEX p/PAYMENT_INDEX [a/AMOUNT] [d/DATE] [r/REMARKS]` | `editpayment 2 p/1 a/30.00 r/Corrected`                                            |
-| **Delete Payment**  | `deletepayment PERSON_INDEX[,PERSON_INDEX]... p/PAYMENT_INDEX`             | `deletepayment 1,3 p/2`                                                            |
+| **Delete Payment**  | `deletepayment PERSON_INDEX p/PAYMENT_INDEX[,PAYMENT_INDEX]...`            | `deletepayment 1 p/1,2`                                                            |
 | **View Payment(s)** | `viewpayment INDEX` or `viewpayment all`                                   | `viewpayment 2`, `viewpayment all`                                                 |
 | **Find Payment**    | `findpayment INDEX [a/AMOUNT] [r/REMARK] [d/DATE]`                         | `findpayment 1 a/50.00`, `findpayment 2 r/Workshop`, `findpayment 3 d/2025-03-15`  |
 | **Help**            | `help`                                                                     | `help`                                                                             |
@@ -775,7 +775,7 @@ Furthermore, certain edits can cause the Treasura to behave in unexpected ways (
 | --------------- | ------------------------------------- |---------------------------| ------------------------- |
 | `NAME`          | Printable chars, trimmed              | 1–100 chars               | No newline                |
 | `PHONE`         | Positive digits, e.g. 87654321        | 8 digits                  | No special character (+)  |
-| `EMAIL`         | One `@`, has `.`                      | 5–100 chars               | Case preserved            |
+| `EMAIL`         | Contains exactly one One `@`, has `.` | 5–100 chars               | Case preserved            |
 | `MATRIC`        | `^A\d{7}[A-Z]$`                       | 9 chars                   | Must be unique            |
 | `TAG`           | Alnum, `_` or `-`                     | 1–30 chars each, ≤10 tags | Case-insensitive, dedupe  |
 | `INDEX`         | Positive int from current list        | 1…list size               | Comma list, dedupe, ≤50   |
