@@ -38,7 +38,7 @@ package Model as ModelPackage <<Rectangle>> {
   }
   class Amount
   class Date
-  class Description
+
   ' Removed UniquePaymentList (no longer needed as payments belong to Person)
 
   class I #FFFFFF
@@ -70,7 +70,6 @@ Person *--> "*" Tag
 Person *--> "*" Payment
 Payment *--> Amount
 Payment *--> Date
-Payment *--> Description
 
 ' Visual alignment helpers
 Person -[hidden]up--> I
