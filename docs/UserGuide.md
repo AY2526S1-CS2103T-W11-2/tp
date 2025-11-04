@@ -140,8 +140,8 @@ Alex records these payments in one go for multiple members.
 addpayment 1,2 a/21.00 d/2025-09-10 r/CCA Shirt Fee
 ```
 
-(Here, `1` refers to Ethan, and `2` to Sarah, based on the current list.)
-<img src="images/EthanSarahPaymentSuccess.png" alt="ethan sarah payment success" width="450" /> <br>
+(Here, `1` refers to Ethan, and `2` to Sarah, based on the current list.) <br>
+<img src="images/EthanSarahPaymentSuccess.png" alt="ethan sarah payment success" width="450" />
 
 A few days later, Lucas pays as well, so Alex first finds Lucas in the list:
 ```
