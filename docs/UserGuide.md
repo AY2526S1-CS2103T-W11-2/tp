@@ -761,6 +761,7 @@ Furthermore, certain edits can cause the Treasura to behave in unexpected ways (
 ### Glossary
 
 * Member = A NUS student part of a CCA
+* CCA = Co-circucular activity
 * Matriculation number = A unique ID given to all NUS students. Starts with A, followed by 7 digits and ending with any upper case letter.
 * JSON = A file format used to store Treasura data.
 * Mutating action = A command that alters any data in Treasura.
