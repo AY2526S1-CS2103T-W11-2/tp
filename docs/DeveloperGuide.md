@@ -790,37 +790,31 @@ testers are expected to do more *exploratory* testing.
 ### **Appendix: Planned Enhancements**
 Our team size is 5.
 
-1. **Payment Dashboard:**  
-Add a simple visual dashboard summarizing all payments (e.g., total collected, outstanding, and by category) for better financial overview.
-
-2. **Multi-CCA Support:**  
+1. **Multi-CCA Support:**  
    Allow users to store and switch between different CCAs’ member and payment data using separate storage files.
 
-3. **Refine error messages:**
-   Some error messages are overly generic, returning only the correct command format. Future updates will provide more specific feedback that identifies the exact cause of the error.
-
-4. **Enforce `viewpayment` Precondition:**  
+2. **Enforce `viewpayment` Precondition:**  
    Currently, `editpayment` and `deletepayment` can be used without viewing a member’s payment list first. This will be fixed by requiring `viewpayment` before editing or deleting payments, ensuring users act within the correct context.
 
-5. **Improve Date Validation Feedback:**  
+3. **Improve Date Validation Feedback:**  
    The same error message is shown for both invalid date formats and future dates. Future versions will distinguish between the two:
     - *Invalid format:* “Please use YYYY-MM-DD (e.g., 2025-01-01).”
     - *Future date:* “Payment date cannot be in the future.”
 
-6. **Enhance Command Error Handling:**  
+4. **Enhance Command Error Handling:**  
    When users enter unknown or misplaced prefixes (e.g., `e/fovfv`), the app currently reports unrelated errors such as “Invalid amount.” This will be updated to show clearer messages like:
-   > “Unknown prefix: e/. Please check your command format.”**
+   > **“Unknown prefix: e/. Please check your command format.”**
 
-7. **Guarded Member Deletion (archive-first flow):**
+5. **Guarded Member Deletion (archive-first flow):**
     Introduce an optional permanent delete pathway that operates only on archived members and requires explicit confirmation (e.g., delete 2 confirm). This clarifies the lifecycle distinction between “hide” (archive) and “purge” (delete), prevents accidental loss, and aligns expectations for users familiar with AB3-style deletion. The User Guide will document the archive-first model, the confirmation step, and the cascade effects (e.g., associated payments removed).
 
-8. **Data Portability & Safe Dataset Reset:**
+6. **Data Portability & Safe Dataset Reset:**
     Add export/import of full datasets as a single portable snapshot (e.g., JSON/ZIP) and a guarded reset command that wipes only the active dataset after confirmation while auto-backing up the current state. This complements Multi-CCA Support by enabling easy cross-device transfer of a CCA’s records and a clean, auditable way to start fresh for a new cohort without risky manual file operations.
 
-9. **Archive and Unarchive Duplicate indexes:**
+7. **Archive and Unarchive Duplicate indexes:**
     Our `archive` and `unarchive` currently accept inputs such as `archive 1,1,1,1` or `unarchive 2,2,2,2`. This has no functional impact on the user or program, but may cause confusion to the user. We plan on implementing a fix for this in the future by rejecting duplicate input.
 
-10. **Find returns incorrect message when including special characters as search terms:**
+8. **Find returns incorrect message when including special characters as search terms:**
     When performing a `find` using special characters such as `find @@@###` or `find Alex %%%$$$` will return the result of the search which would be 0 members, or members matching the name or tag "Alex". However, since our names only consist of letters and tags are alphanumeric, special symbols in the search should return an error.
 
 <!-- @@author Roshan1572 -->
