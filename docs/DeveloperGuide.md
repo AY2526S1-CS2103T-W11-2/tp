@@ -57,7 +57,7 @@ The *Sequence Diagram* below shows how the components interact with each other f
 Each of the four main components (also shown in the diagram above),
 
 * defines its *API* in an `interface` with the same name as the Component.
-* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point.
+* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point.)
 
 For example, the `Logic` component defines its API in the `Logic.java` interface and implements its functionality using the `LogicManager.java` class which follows the `Logic` interface. Other components interact with a given component through its interface rather than the concrete class (reason: to prevent outside component's being coupled to the implementation of a component), as illustrated in the (partial) class diagram below.
 
@@ -71,7 +71,7 @@ The **API** of this component is specified in [`Ui.java`](https://github.com/se-
 
 <puml src="diagrams/UiClassDiagram.puml" alt="Structure of the UI Component"/>
 
-The UI consists of a `MainWindow` that is made up of parts e.g.`CommandBox`, `ResultDisplay`, `PersonListPanel`, `StatusBarFooter` etc. All these, including the `MainWindow`, inherit from the abstract `UiPart` class which captures the commonalities between classes that represent parts of the visible GUI.
+The UI consists of a `MainWindow` that is made up of parts e.g.`CommandBox`, `ResultDisplay`, `PersonListPanel`, `StatusBarFooter` etc. All these, including the `MainWindow`, derived from the abstract `UiPart` class which captures the commonalities between classes that represent parts of the visible GUI.
 
 The `UI` component uses the JavaFX UI framework. The layout of these UI parts are defined in matching `.fxml` files that are in the `src/main/resources/view` folder. For example, the layout of the [`MainWindow`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/ui/MainWindow.java) is specified in [`MainWindow.fxml`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/resources/view/MainWindow.fxml)
 
@@ -224,7 +224,7 @@ The add payment feature allows Treasura users to **record a new payment** for on
 
 The sequence diagram below illustrates the interactions within the `Logic` component for adding payments.
 
-<puml src="diagrams/AddPaymentSequenceDiagram.puml" width="550" alt="Interactions Inside the Logic Component for the `archive` Command" />
+<puml src="diagrams/AddPaymentSequenceDiagram.puml" width="550" alt="Interactions Inside the Logic Component for the `add payment` Command" />
 
 <box type="info" seamless>
 
@@ -254,7 +254,7 @@ How the `addpayment` command works:
 
 **Validation highlights**
 - **Indices:** Must refer to members in the current displayed list; invalid indices cause the command to fail without partial writes.
-- **Amount:** Must be a non-negative monetary value with up to two decimal places.
+- **Amount:** Must be a positive monetary value with up to two decimal places.
 - **Date:** Must follow the accepted format (e.g., `YYYY-MM-DD`) and be a valid calendar date that is not in the future.
 - **Remark:** Free text; excessively long remarks may be truncated or rejected depending on constraints.
 
@@ -263,6 +263,7 @@ How the `addpayment` command works:
 ### ViewPayment feature
 
 The view payment feature allows Treasura users to **display all payments** associated with a specific member.
+Additionally, using `viewpayment all` generates a consolidated summary of payments for every member in Treasura.
 
 The sequence diagram below illustrates the interactions within the `Logic` component for viewing payments.
 
@@ -335,7 +336,6 @@ High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have
 | `* * *`  | CCA Treasurer | delete payment from a member             | delete unintended payment             |
 | `* * *`  | CCA Treasurer | see the time and date of payments        | track payments chronologically        |
 | `* * *`  | CCA Treasurer | search for payments                      | find payment records                  |
-| `* * *`  | CCA Treasurer | sync data automatically when back online | avoid manual backups                  |
 
 
 ## Use cases
@@ -623,7 +623,7 @@ Extensions:
   Use case ends.
 
 * 2a. No payments match the filters.  
-  Treasura shows message: *No payments found for Marcus Lee matching [amount | date | remark]*.  
+  Treasura shows message: *No payments found for [NAME] matching [amount | date | remark]*.  
   Use case ends.
 
 
@@ -754,7 +754,7 @@ Extensions:
 ### Glossary
 
 * **Mainstream OS** — Commonly used operating systems such as **Windows**, **Linux**, **Unix**, and **macOS**.
-* **Student ID** — A unique identification code assigned to each **NUS student** (e.g., A0123456X).
+* **Matriculation Number** — A unique identification code assigned to each **NUS student** (e.g., A0123456X).
 * **CCA** — Stands for *Co-Curricular Activity*; refers to a **student club, society, or organization** in NUS.
 * **Archived member** — A member who has been soft-deleted from the active list but remains in storage for record-keeping.
 * **Payment Record** — A transaction entry associated with a member, containing an **amount**, **date**, and optional **remarks**.
